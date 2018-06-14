@@ -17,16 +17,49 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #ddd;
+  background: linear-gradient(45deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
   font-family: 'Space Mono', monospace;
   font-size: 16px;
 }
 
 .jumbotron {
   background: transparent;
-  padding: 2em 0 2em 0;
+  color: white;
+  padding: 3em 0 3em 0;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  .btn {
+    border: 3px solid orange;
+    background-color: inherit;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+      background-color: inherit;
+      transform: translateX(20px);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+  }
 }
 
+.card {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  .card-text {}
+  .card-link {}
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+}
 
 // Input Fields
 // -------------------------
@@ -45,21 +78,30 @@ textarea {
 }
 
 .navbar {
-  padding: 1em;
+  padding: 1em 0 1em 0;
   margin-bottom: 0px;
   display: block;
-}
 
-.navbar-brand {
-  font-size: 18px;
-  float: left;
-  margin-left: 15px;
-}
-
-.navbar-item a {
+  .navbar-brand {
     color: #FFF;
-    opacity: .75;
+    font-size: 18px;
+    float: left;
+  }
 }
+
+.navbar-inverse {
+  .navbar-nav {
+    .nav-link {
+      color: #FFF;
+      opacity: .75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .navbar-toggler {
   position: relative;
   float: right;
@@ -79,6 +121,19 @@ textarea {
 
 .bg-black {
   background-color: #222;
+}
+
+// Buttons
+
+.btn {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    background-color: inherit;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
 }
 
 // Alerts
